@@ -1,0 +1,19 @@
+1) when we create new project in vue cli  in main.js you will see 
+import {createApp} from Vue
+impoet App from './App.vue'
+
+Vue.createApp(App).mount('#app')
+
+hear we are importting create app and providing App vue file which will at end
+contain all options config like data methods etc because all our code will merge
+to App.vue at end wather we use router-view or provide components in it
+and #app will be in public/index.html
+
+2) as you know there are 2 ways to use components in vue app 1 is use taht components localy by importing to other component but we also need to use some 
+components globally in app so it is not good idea to import and add as component
+in every place we want it so for that type of components we register them add global component by just adding it as component of app in main js so in all 
+sub component we can directly use it without importing it for that we do 
+app.component('component name', component) in main.js file 
+
+
+- components should sit inside components folder and all name of component shoild be in pascal case
